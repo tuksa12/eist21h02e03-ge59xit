@@ -45,14 +45,14 @@ public class Collision {
 	 */
 	public Car evaluate() {
 
-		// TODO Backlog Item 11: Collisions follow the "right before left" rule, and thus right-most
+		// DONE Backlog Item 11: Collisions follow the "right before left" rule, and thus right-most
 		// cars on the screen win the collisions
 
 		Point2D p1 = this.car1.getPosition();
 		Point2D p2 = this.car2.getPosition();
 
 		Car winnerCar = null;
-		if (p1.getX() > p2.getX()) {
+		if (p1.getX() < p2.getX()) {
 			winnerCar = this.car2;
 		} else {
 			winnerCar = this.car1;

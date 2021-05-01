@@ -207,13 +207,19 @@ public class GameBoard {
 
 				this.audioPlayer.playCrashSound();
 
-				// TODO Backlog Item 11: The loser car is crunched and stops driving
+				// DONE Backlog Item 11: The loser car is crunched and stops driving
+				loser.crunch();
 
-				// TODO Backlog Item 11: The player gets notified when he looses or wins the game
+				// DONE Backlog Item 11: The player gets notified when he looses or wins the game
 				/*
 				 * Hint: you should set the attribute gameOutcome accordingly. Use 'isWinner()'
 				 * below for your implementation
 				 */
+				if(isWinner()){
+					gameOutcome = GameOutcome.WON;
+				} else{
+					gameOutcome = GameOutcome.LOST;
+				}
 
 			}
 		}
